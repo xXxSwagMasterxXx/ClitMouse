@@ -38,11 +38,12 @@ document.body.onkeyup =
    } );
 
 function onDocumentMouseMove( event ) {
-	mouse.x = event.x;
-	mouse.y = event.y;
+	mouse.dx = event.clientX - mouse.x;
+	mouse.dy = event.clientY - mouse.y;
+	mouse.x = event.clientX;
+	mouse.y = event.clientX;
 	mouse.tIdle = 0;
-	mouse.dx = event.movementX;
-	mouse.dy = event.movementY;
+	
 	//console.log( "mouse moved fucker" );
 	
 }
